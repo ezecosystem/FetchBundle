@@ -1,0 +1,9 @@
+parameters:
+    fetch.criteria_helper.class: BrunoChirez\FetchBundle\Helper\CriteriaHelper
+    # Default limit that will be applied when retrieving content for menus.
+    fetch.criteria_helper.default_limit: 10
+
+services:
+    fetch.criteria_helper:
+        class: %fetch.criteria_helper.class%
+        arguments: [@ezpublish.api.repository, %fetch.criteria_helper.default_limit%]
